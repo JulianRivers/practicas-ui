@@ -13,6 +13,6 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'practicas ui',
-        home: Scaffold(body: LoginScreen()));
+        home: Scaffold(body: ButtonScreen()));
   }
 }

@@ -14,15 +14,15 @@ class ButtonScreen extends StatelessWidget {
             text: 'Material Design \n Material You',
             onPressed: () {},
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           FlatButton(onPressed: () {}, text: "Flat Design"),
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           SaturedButton(
             color: const Color(0xFF213e70),
             text: 'Neumorphism \n Skeumorphis',
             onPressed: () {},
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           GlassButton(
             onPressed: () {},
             text: 'Glass Desing',
@@ -92,9 +92,10 @@ class FlatButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final media = MediaQuery.of(context).size;
     return SizedBox(
-      height: 120,
-      width: 350,
+      height: media.height*0.15,
+      width: media.width*0.9,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -130,9 +131,10 @@ class GlassButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final media = MediaQuery.of(context).size;
     return Container(
-      height: 120,
-      width: 350,
+      height: media.height*0.15,
+      width: media.width*0.9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
       ),
@@ -172,15 +174,16 @@ class SaturedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final media = MediaQuery.of(context).size;
     return Container(
-      height: 120,
-      width: 350,
+      height: media.height*0.15,
+      width: media.width*0.9,
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(10), boxShadow: [
         BoxShadow(
             color: Colors.white.withOpacity(0.3),
-            offset: const Offset(-10, -10),
-            blurRadius: 20),
+            offset: const Offset(-5, -5),
+            blurRadius: 15),
         BoxShadow(
             color: Colors.black.withOpacity(0.5),
             offset: const Offset(8, 8),

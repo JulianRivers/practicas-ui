@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
               ],
             )),
         Positioned(
-          bottom: media.width * -1.25,
+          bottom: media.width * -1.19,
           child: CustomLoginForm(
             height: media.height,
             width: media.width,
